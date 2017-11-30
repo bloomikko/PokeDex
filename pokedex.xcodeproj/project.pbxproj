@@ -14,6 +14,9 @@
 		522EB8E21FD02B5000E10E7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522EB8E01FD02B5000E10E7C /* LaunchScreen.storyboard */; };
 		522EB8ED1FD02B5000E10E7C /* pokedexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522EB8EC1FD02B5000E10E7C /* pokedexTests.swift */; };
 		522EB8F81FD02B5000E10E7C /* pokedexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522EB8F71FD02B5000E10E7C /* pokedexUITests.swift */; };
+		522EB9061FD031E500E10E7C /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 522EB9051FD031E500E10E7C /* pokemon.csv */; };
+		522EB9091FD034B800E10E7C /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522EB9081FD034B800E10E7C /* Pokemon.swift */; };
+		522EB90E1FD03EE800E10E7C /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522EB90D1FD03EE800E10E7C /* PokeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		522EB8F31FD02B5000E10E7C /* pokedexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pokedexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		522EB8F71FD02B5000E10E7C /* pokedexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pokedexUITests.swift; sourceTree = "<group>"; };
 		522EB8F91FD02B5000E10E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		522EB9051FD031E500E10E7C /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
+		522EB9081FD034B800E10E7C /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		522EB90D1FD03EE800E10E7C /* PokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PokeCell.swift; path = ../../../PokeDex/pokedex/View/PokeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,10 +103,13 @@
 		522EB8D61FD02B5000E10E7C /* pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				522EB9071FD0334900E10E7C /* Model */,
+				522EB90C1FD03EC700E10E7C /* View */,
 				522EB8D71FD02B5000E10E7C /* AppDelegate.swift */,
 				522EB8D91FD02B5000E10E7C /* ViewController.swift */,
 				522EB8DB1FD02B5000E10E7C /* Main.storyboard */,
 				522EB8DE1FD02B5000E10E7C /* Assets.xcassets */,
+				522EB9051FD031E500E10E7C /* pokemon.csv */,
 				522EB8E01FD02B5000E10E7C /* LaunchScreen.storyboard */,
 				522EB8E31FD02B5000E10E7C /* Info.plist */,
 			);
@@ -123,6 +132,22 @@
 				522EB8F91FD02B5000E10E7C /* Info.plist */,
 			);
 			path = pokedexUITests;
+			sourceTree = "<group>";
+		};
+		522EB9071FD0334900E10E7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				522EB9081FD034B800E10E7C /* Pokemon.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		522EB90C1FD03EC700E10E7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				522EB90D1FD03EE800E10E7C /* PokeCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +259,7 @@
 			files = (
 				522EB8E21FD02B5000E10E7C /* LaunchScreen.storyboard in Resources */,
 				522EB8DF1FD02B5000E10E7C /* Assets.xcassets in Resources */,
+				522EB9061FD031E500E10E7C /* pokemon.csv in Resources */,
 				522EB8DD1FD02B5000E10E7C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +287,8 @@
 			files = (
 				522EB8DA1FD02B5000E10E7C /* ViewController.swift in Sources */,
 				522EB8D81FD02B5000E10E7C /* AppDelegate.swift in Sources */,
+				522EB90E1FD03EE800E10E7C /* PokeCell.swift in Sources */,
+				522EB9091FD034B800E10E7C /* Pokemon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +461,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mikkorouru.pokedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -448,7 +476,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mikkorouru.pokedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
